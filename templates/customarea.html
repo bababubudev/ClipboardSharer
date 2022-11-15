@@ -15,12 +15,20 @@
 <body>
     <section id="section">
         <h1>Hello, {{username}}!</h1>
-
         <div class="base-text">
             <form action="/" class="form">
                 <textarea class="user-inputbox" type="text" name="textinputs" placeholder="Modifiable area!"></textarea>
                 <button class="submit-button" type="submit">Save</button>
             </form>
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for msg in messages %}
+            <p>{{msg}}</p>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
         </div>
     </section>
 </body>
