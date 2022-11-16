@@ -22,7 +22,7 @@
                 <button class="submit-button" type="submit" value="submit">Take me to link!</button>
             </form>
         </div>
-        {% if user_valid %}
+        {% if link_valid %}
         <div class="button-container">
             <form action="{{ url_for('inbox') }}">
                 <button class="check-data">Previous Redirect</button>
